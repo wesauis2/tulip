@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@editorjs/editorjs': ^2.23.2
+  '@editorjs/paragraph': ^2.8.0
   '@types/node': ^12.20.46
   '@types/react': ^17.0.39
   '@types/react-dom': ^17.0.11
@@ -13,6 +15,8 @@ specifiers:
   typescript: ^4.5.5
 
 dependencies:
+  '@editorjs/editorjs': 2.23.2
+  '@editorjs/paragraph': 2.8.0
   next: 12.1.0_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -48,6 +52,18 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
+
+  /@editorjs/editorjs/2.23.2:
+    resolution: {integrity: sha512-SXWQjxE/ZO6zWvo83U+gfkM9LVJzYOtNkttyXkdfyYALVWiENyxtlej/Jmd1TZ4yWpKwQEICPXz0ceGkzKnJyQ==}
+    dependencies:
+      codex-notifier: 1.1.2
+      codex-tooltip: 1.0.4
+      nanoid: 3.3.1
+    dev: false
+
+  /@editorjs/paragraph/2.8.0:
+    resolution: {integrity: sha512-z6w5ZR0ru3p/IjxJW/tb7OcSnVttkZukQMIsnBMX1FIKc1BNdr7NwM1YoCyTl4OnC90YfL0xgES6/20/W267pw==}
+    dev: false
 
   /@next/env/12.1.0:
     resolution: {integrity: sha512-nrIgY6t17FQ9xxwH3jj0a6EOiQ/WDHUos35Hghtr+SWN/ntHIQ7UpuvSi0vaLzZVHQWaDupKI+liO5vANcDeTQ==}
@@ -332,6 +348,14 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /codex-notifier/1.1.2:
+    resolution: {integrity: sha512-DCp6xe/LGueJ1N5sXEwcBc3r3PyVkEEDNWCVigfvywAkeXcZMk9K41a31tkEFBW0Ptlwji6/JlAb49E3Yrxbtg==}
+    dev: false
+
+  /codex-tooltip/1.0.4:
+    resolution: {integrity: sha512-Ud+N+y8PMIa9xGyKuo2j3q8QlfTzkMWQ5KeRrbCDerwVn7xq45nqPKQCFBXEMV0YI42/OqSMnsxP8MyVAyVhnA==}
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
