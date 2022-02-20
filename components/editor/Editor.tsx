@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
-import EditorJS, { EditorConfig } from "@editorJS/editorJS";
-import tools from "./tools";
+import EditorJS, { EditorConfig } from "@editorjs/editorjs";
 import { EditorProps } from "./types";
 
-const EDITOR_HOLDER_ID = "__editor-js";
+import { tools, tunes } from "./config";
+import DragDrop from "editorjs-drag-drop";
+
+export const EDITOR_HOLDER_ID = "__editor-js";
 
 const Editor: React.FC<EditorProps> = ({
   data,
@@ -35,8 +37,11 @@ const Editor: React.FC<EditorProps> = ({
       tools,
       onReady() {
         $editorJS.current = editorJS;
+        new DragDrop(editorJS);
       },
-      onChange: async () => onChange(await editorJS.saver.save()),
+      tunes: tunes,
+      // FIXME: throttle
+      // onChange: async () => onChange(await editorJS.saver.save()),
     });
   }
 
