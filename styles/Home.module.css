@@ -1,0 +1,32 @@
+.home {
+  @apply w-[90vw] h-[90vh]
+         m-auto mt-[5vh]
+         border-2 border-pink-200 rounded-lg
+         bg-zinc-50
+         
+         grid grid-cols-2
+         border-collapse;
+}
+
+.info {
+  @apply border-r-2 border-pink-100
+         grid content-center justify-center gap-2
+         text-center;
+}
+
+.logo {
+  @apply rounded-full
+         text-6xl;
+}
+
+.info p {
+  @apply text-gray-500;
+}
+
+.picker {
+  @apply grid place-content-center;
+}
+
+.picker button {
+  @apply h-min bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded;
+}

@@ -7,6 +7,9 @@ import DragDrop from "editorjs-drag-drop";
 
 export const EDITOR_HOLDER_ID = "__editor-js";
 
+// TODO: codeblock (prisma?)
+// TODO: shell block (prisma commandline)
+
 const Editor: React.FC<EditorProps> = ({
   data,
   logLevel,
@@ -33,15 +36,14 @@ const Editor: React.FC<EditorProps> = ({
       data,
       holder: EDITOR_HOLDER_ID,
       logLevel: (logLevel || "ERROR") as EditorConfig["logLevel"],
-      autofocus: autofocus || true,
+      autofocus: autofocus ?? true,
       tools,
       onReady() {
         $editorJS.current = editorJS;
         new DragDrop(editorJS);
       },
       tunes: tunes,
-      // FIXME: throttle
-      // onChange: async () => onChange(await editorJS.saver.save()),
+      onChange: async () => onChange(await editorJS.saver.save()),
     });
   }
 

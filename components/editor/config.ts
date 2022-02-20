@@ -82,11 +82,7 @@ export const tools: EditorTools = {
     },
     tunes: [],
   },
-  // for some reason enabling this tool adds yandex and google scripts to the page
-  // i'll fix it later :)
-  // embed: {
-  //   class: Embed,
-  // },
+  embed: Embed,
   table: {
     class: Table,
     inlineToolbar: true,
