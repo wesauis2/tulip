@@ -16,7 +16,7 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "dev": "next",
+    "dev": "cross-env NODE_ENV=development next",
     "build": "next build",
     "export": "next export",
     "type-check": "tsc",
